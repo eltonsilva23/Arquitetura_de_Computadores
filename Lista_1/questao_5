@@ -1,0 +1,19 @@
+.text
+main:
+	addi $2, $0, 5
+	syscall
+	addi $7, $0, 10
+	div $8, $2, $7
+	mfhi $10 #Resto
+	mflo $8
+	div $8, $8, $7
+	mfhi $11
+	add $13, $10, $11
+	mflo $8
+	div $8, $8, $7
+	mfhi $12
+	add $4, $13, $12
+	addi $2, $0, 1
+	syscall
+	addi $2, $0, 10
+	syscall

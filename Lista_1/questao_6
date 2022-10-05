@@ -1,0 +1,33 @@
+.text
+main:
+	addi $2, $0, 5
+	syscall
+	
+	addi $10, $0, 10
+	div $2, $10
+	mfhi $11
+	mflo $2
+	
+	div $2, $10
+	mfhi $12
+	mflo $2
+	
+	div $2, $10
+	mfhi $13
+	mflo $2
+	
+impressao:
+	add $4, $13, $0
+	addi $2, $0, 1
+	syscall
+	
+	add $4, $12, $0
+	addi $2, $0, 1
+	syscall
+	
+	add $4, $11, $0
+	addi $2, $0, 1
+	syscall
+	
+fim:	addi $2, $0, 10
+	syscall

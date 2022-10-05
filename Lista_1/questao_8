@@ -1,0 +1,22 @@
+.text
+main:
+	
+horas:		addi $2, $0, 5
+		syscall
+		addi $11, $0, 3600
+		mul $8, $2, $11
+
+minutos:	addi $2, $0, 5
+		syscall
+		addi $11, $0, 60
+		mul $9, $2, $11
+	
+segundos:	addi $2, $0, 5
+		syscall
+
+total:		add $10, $8, $9
+		add $10, $10, $2
+
+impressao:	add $4, $0, $10
+		addi $2, $0, 1
+		syscall
